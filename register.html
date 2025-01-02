@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter Clone Bootstrap 5 Example</title>
-
     <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark ticky-top bg-body-tertiary"
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark sticky-top bg-body-tertiary"
         data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand fw-light" href="/"><span class="fas fa-brain me-1"> </span>Ideas</a>
+            <a class="navbar-brand fw-light" href="/"><span class="fas fa-brain me-1"></span> Ideas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,24 +41,26 @@
             <div class="col-12 col-sm-8 col-md-6">
                 <form class="form mt-5" action="" method="post">
                     <h3 class="text-center text-dark">Register</h3>
-                    <div class="form-group">
-                        <label for="email" class="text-dark">Email:</label><br>
-                        <input type="email" name="email" id="email" class="form-control">
+                    <div class="form-group mt-3">
+                        <label for="email" class="text-dark">Email:</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
+                            required>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="password" class="text-dark">Password:</label><br>
-                        <input type="text" name="password" id="password" class="form-control">
+                        <label for="password" class="text-dark">Password:</label>
+                        <input type="password" name="password" id="password" class="form-control"
+                            placeholder="Enter your password" required>
                     </div>
                     <div class="form-group mt-3">
-                        <label for="confirm-password" class="text-dark">Confirm Password:</label><br>
-                        <input type="text" name="confirm-password" id="confirm-password" class="form-control">
+                        <label for="confirm-password" class="text-dark">Confirm Password:</label>
+                        <input type="password" name="confirm-password" id="confirm-password" class="form-control"
+                            placeholder="Re-enter your password" required>
                     </div>
-                    <div class="form-group">
-                        <label for="remember-me" class="text-dark"></label><br>
-                        <input type="submit" name="submit" class="btn btn-dark btn-md" value="submit">
+                    <div class="form-group mt-4">
+                        <input type="submit" name="submit" class="btn btn-dark btn-md w-100" value="Register">
                     </div>
-                    <div class="text-right mt-2">
-                        <a href="/login" class="text-dark">Login here</a>
+                    <div class="text-center mt-3">
+                        <a href="/login" class="text-dark">Already have an account? Login here</a>
                     </div>
                 </form>
             </div>
