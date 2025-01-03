@@ -10,16 +10,16 @@
 <body>
     <header class="bg-light py-2 border-bottom">
         <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" aria-label="TwitterClone Home">
                 <i class="fab fa-twitter text-primary"></i> TwitterClone
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                        <a class="nav-link active" href="#" aria-current="page"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-hashtag"></i> Explore</a>
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notifications</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search Twitter" aria-label="Search">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
@@ -43,27 +43,28 @@
                         </ul>
                     </li>
                 </ul>
+                <button id="toggleDarkMode" class="btn btn-outline-secondary ms-3">Dark Mode</button>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-4">
+    <main class="container mt-4">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-3">
+            <aside class="col-md-3">
                 <ul class="list-group sticky-top">
                     <li class="list-group-item"><i class="fas fa-home"></i> Home</li>
                     <li class="list-group-item"><i class="fas fa-hashtag"></i> Explore</li>
                     <li class="list-group-item"><i class="fas fa-bell"></i> Notifications</li>
                     <li class="list-group-item"><i class="fas fa-envelope"></i> Messages</li>
                 </ul>
-            </div>
+            </aside>
 
             <!-- Main Content -->
-            <div class="col-md-6">
+            <section class="col-md-6">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <textarea class="form-control" rows="3" placeholder="What's happening?"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="What's happening?" aria-label="Compose Tweet"></textarea>
                         <div class="d-flex justify-content-end mt-2">
                             <button class="btn btn-primary">Tweet</button>
                         </div>
@@ -80,10 +81,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Right Sidebar -->
-            <div class="col-md-3">
+            <aside class="col-md-3">
                 <h5>Who to Follow</h5>
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -95,14 +96,21 @@
                         <button class="btn btn-outline-primary btn-sm">Follow</button>
                     </li>
                 </ul>
-            </div>
+            </aside>
         </div>
-    </div>
+    </main>
 
     <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2025 TwitterClone. All Rights Reserved.</p>
+        <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Support</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('toggleDarkMode').addEventListener('click', () => {
+            document.body.classList.toggle('bg-dark');
+            document.body.classList.toggle('text-light');
+        });
+    </script>
 </body>
 </html>
