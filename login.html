@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Twitter Clone Bootstrap 5 Example</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -17,9 +17,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-light" href="/" aria-label="Home">
                 <span class="fas fa-brain me-1"></span>Ideas
@@ -52,17 +52,17 @@
                 <form class="form" action="/login" method="post">
                     <h3 class="text-center text-dark">Login</h3>
                     <div class="form-group mt-4">
-                        <label for="email" class="text-dark">Email:</label>
+                        <label for="email" class="form-label text-dark">Email:</label>
                         <input type="email" name="email" id="email" class="form-control" required
                             placeholder="Enter your email" aria-label="Email Address">
                     </div>
                     <div class="form-group mt-3">
-                        <label for="password" class="text-dark">Password:</label>
+                        <label for="password" class="form-label text-dark">Password:</label>
                         <input type="password" name="password" id="password" class="form-control" required
                             placeholder="Enter your password" aria-label="Password">
                     </div>
                     <div class="form-group mt-4">
-                        <input type="submit" name="submit" class="btn btn-dark btn-md w-100" value="Login">
+                        <button type="submit" class="btn btn-dark btn-md w-100">Login</button>
                     </div>
                     <div class="text-center mt-3">
                         <a href="/register" class="text-dark text-decoration-none">
