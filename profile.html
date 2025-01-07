@@ -30,6 +30,9 @@
             background-color: #1e1e1e;
             color: #e1e1e1;
         }
+        .btn-outline-secondary:focus {
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
@@ -139,18 +142,10 @@
         const isDarkMode = () => document.body.classList.contains('dark-mode');
 
         // Initialize based on saved preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            applyDarkMode();
-        }
+        if (localStorage.getItem('darkMode') === 'enabled') applyDarkMode();
 
         toggleDarkMode.addEventListener('click', () => {
-            if (isDarkMode()) {
-                removeDarkMode();
-                localStorage.setItem('darkMode', 'disabled');
-            } else {
-                applyDarkMode();
-                localStorage.setItem('darkMode', 'enabled');
-            }
+            isDarkMode() ? (removeDarkMode(), localStorage.setItem('darkMode', 'disabled')) : (applyDarkMode(), localStorage.setItem('darkMode', 'enabled'));
         });
     </script>
 </body>
