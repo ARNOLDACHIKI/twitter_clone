@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,31 +12,48 @@
         body {
             transition: background-color 0.3s, color 0.3s;
         }
+
         .sticky-top {
             top: 1rem;
         }
+
         .dark-mode {
             background-color: #121212;
             color: #e1e1e1;
         }
-        .dark-mode .card {
-            background-color: #1e1e1e;
-            color: #e1e1e1;
-        }
+
+        .dark-mode .card,
         .dark-mode .list-group-item {
             background-color: #1e1e1e;
             color: #e1e1e1;
         }
-        .dark-mode .navbar, .dark-mode footer {
+
+        .dark-mode .navbar,
+        .dark-mode footer {
             background-color: #1e1e1e;
             color: #e1e1e1;
         }
+
         .btn-outline-secondary:focus {
             box-shadow: none;
         }
+
+        textarea:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+        }
+
+        .tweet-interaction span {
+            cursor: pointer;
+        }
+
+        .tweet-interaction span:hover {
+            color: #007bff;
+        }
     </style>
 </head>
+
 <body>
+    <!-- Header -->
     <header class="bg-light py-2 border-bottom">
         <nav class="navbar navbar-expand-lg navbar-light container-fluid">
             <a class="navbar-brand" href="#" aria-label="TwitterClone Home">
@@ -76,11 +94,12 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="container-fluid mt-4">
         <div class="row">
             <!-- Sidebar -->
             <aside class="col-md-3 mb-4">
-                <ul class="list-group sticky-top">
+                <ul class="list-group sticky-top" aria-label="Navigation Links">
                     <li class="list-group-item"><i class="fas fa-home"></i> Home</li>
                     <li class="list-group-item"><i class="fas fa-hashtag"></i> Explore</li>
                     <li class="list-group-item"><i class="fas fa-bell"></i> Notifications</li>
@@ -88,8 +107,9 @@
                 </ul>
             </aside>
 
-            <!-- Main Content -->
+            <!-- Feed Section -->
             <section class="col-md-6">
+                <!-- Compose Tweet -->
                 <div class="card mb-3">
                     <div class="card-body">
                         <textarea class="form-control" rows="3" placeholder="What's happening?" aria-label="Compose Tweet"></textarea>
@@ -99,11 +119,12 @@
                     </div>
                 </div>
 
+                <!-- Sample Tweet -->
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">User Name</h5>
                         <p class="card-text">This is a sample tweet content. <a href="#">Read more...</a></p>
-                        <div class="d-flex justify-content-between">
+                        <div class="tweet-interaction d-flex justify-content-between">
                             <span><i class="fas fa-heart"></i> 10 Likes</span>
                             <span><i class="fas fa-comment"></i> 5 Comments</span>
                         </div>
@@ -114,7 +135,7 @@
             <!-- Right Sidebar -->
             <aside class="col-md-3">
                 <h5>Who to Follow</h5>
-                <ul class="list-group">
+                <ul class="list-group" aria-label="Who to Follow List">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <span>User 1</span>
                         <button class="btn btn-outline-primary btn-sm">Follow</button>
@@ -128,6 +149,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2025 TwitterClone. All Rights Reserved.</p>
         <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Support</a>
@@ -149,4 +171,5 @@
         });
     </script>
 </body>
+
 </html>
