@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-label="Login Page" href="/login">Login</a>
+                        <a class="nav-link active" href="/login" aria-current="page">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="Register Page" href="/register">Register</a>
+                        <a class="nav-link" href="/register">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="Profile Page" href="/profile">Profile</a>
+                        <a class="nav-link" href="/profile">Profile</a>
                     </li>
                 </ul>
             </div>
@@ -46,32 +46,32 @@
 
     <!-- Main Content -->
     <main class="container my-5">
-        <div class="row justify-content-center">
+        <section class="row justify-content-center">
             <div class="col-12 col-sm-8 col-md-6">
                 <!-- Login Form -->
-                <form class="form" action="/login" method="post">
-                    <h3 class="text-center text-dark">Login</h3>
+                <form action="/login" method="post" aria-labelledby="loginHeading">
+                    <h3 id="loginHeading" class="text-center text-dark">Login</h3>
                     <div class="form-group mt-4">
                         <label for="email" class="form-label text-dark">Email:</label>
                         <input type="email" name="email" id="email" class="form-control" required
-                            placeholder="Enter your email" aria-label="Email Address">
+                            placeholder="Enter your email" aria-required="true">
                     </div>
                     <div class="form-group mt-3">
                         <label for="password" class="form-label text-dark">Password:</label>
                         <input type="password" name="password" id="password" class="form-control" required
-                            placeholder="Enter your password" aria-label="Password">
+                            placeholder="Enter your password" aria-required="true">
                     </div>
                     <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-dark btn-md w-100">Login</button>
+                        <button type="submit" class="btn btn-dark w-100" aria-label="Submit Login Form">Login</button>
                     </div>
                     <div class="text-center mt-3">
-                        <a href="/register" class="text-dark text-decoration-none">
+                        <a href="/register" class="text-dark text-decoration-none" aria-label="Navigate to Register Page">
                             Don't have an account? Register here
                         </a>
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
