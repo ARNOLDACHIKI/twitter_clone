@@ -20,7 +20,7 @@ To get this project running locally:
     ``` sh
     cd twitter_clone
     ```
-4. Open the index.html file using your browser or **Live Preview** etension in VS Code
+4. Open the index.html file using your browser or **Live Preview** extension in VS Code
 
 
 ## Contributions
